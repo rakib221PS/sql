@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CDFE95DB-F323-DB70-1FC0-6E1CA7D2C11F" name="room">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>90DBCF11-A6A6-5460-B26C-C9916D0C6908</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="room_id" id="091C68B4-1714-1055-7C47-FF9975179C9A">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>8B251506-9E8C-7376-4E38-962547BFAB44</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="workshop_wid" id="18AF8E46-A7C6-97B5-18EE-4E7296C9A92D">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>AC89F4EC-7A3B-89C4-92AC-38B9C6EC930C</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A19DB727-F58A-6DDA-10A3-7EC9F5E2AB38" referredColumn="936B3A2A-F6A3-2B0B-DA40-87C7E5375997"/>
+</associations>
+</Column>
+<Column name="conference_venue_conference_venue_ID" id="758EBB95-46BD-AAC7-863B-16DEE16ACCDF">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF7D1E83-929D-A308-3DC1-075B93228402" referredColumn="A5884D64-142C-D446-F926-9DC1F038F044"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BDC33A80-EFB9-5CE8-C90F-820523408E0D" name="room_PK">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>7D3D256A-BBB3-225A-D445-00E3B01046AB</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="091C68B4-1714-1055-7C47-FF9975179C9A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6375A822-A56A-731C-CA7C-FE21664F10DA" name="room__IDX">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F0F67DC1-7275-0D12-49EE-6949E02D9CB3</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="18AF8E46-A7C6-97B5-18EE-4E7296C9A92D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8236D9AA-8D6D-F017-3825-4C84204D0C5A" name="room_conference_venue_FK">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>A8CC0098-81D6-4379-0775-2615D2BFB13E</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="758EBB95-46BD-AAC7-863B-16DEE16ACCDF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="763C266F-DDD2-BE00-8D9C-83671042B968" name="room_workshop_FK">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>F0F67DC1-7275-0D12-49EE-6949E02D9CB3</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18AF8E46-A7C6-97B5-18EE-4E7296C9A92D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

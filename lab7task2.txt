@@ -1,0 +1,96 @@
+
+create table participant(
+     pid number not null,
+     name varchar2(32) not null,
+     email varchar2(32) not null,
+     day date not null,
+     workshop_wid number not null
+);
+
+create table room(
+    floor number not null,
+    room number not null,
+    capacity number not null,
+    conference_venue_conference_venue_id number not null,
+    workshop_wid number not null
+);
+
+create unique index room__idx on
+    room (
+        workshop_wid
+    asc );
+
+create table workshop(
+    wid number not null,
+    name varchar2(32) not null,
+    start_date date not null,
+    end_date date not null
+);
+
+
+create table conference_venue(
+    conference_venue_id number not null,
+    name varchar2(32) not null
+);
+alter table participant add constraint participant_pk primary key (pid, workshop_wid);
+alter table workshop add constraint workshop_pk primary key(wid);
+
+alter table participant
+        add constraint participant_workshop_fk foreign key (workshop_wid)
+            references workshop (wid);
+alter table conference_venue add constraint conference_venue_pk primary key ( conference_venue_id );
+
+alter table room add constraint room_pk primary key (floor,room, conference_venue_conference_venue_id);
+
+alter table room
+        add constraint room_conference_venue_fk foreign key (conference_venue_conference_venue_id)
+            references conference_venue (conference_venue_id);
+
+alter table room
+        add constraint room_workshop_fk foreign key (workshop_wid)
+            references workshop (wid);
+
+
+insert into workshop values(1, 'kkk', '04JUN92', '04JUN92');
+insert into workshop values(2, 'ddd', '05JAN92', '04JUN92');
+insert into workshop values(3, 'jjj', '04JUN92', '04JUN92');
+insert into workshop values(4, 'ppp', '04DEC92', '09DEC92');
+insert into workshop values(5, 'fff', '04JUN92', '04JUN92');
+
+insert into participant values(6, 'kkk', 'k@gmail.com', '04MAR99', 1);
+insert into participant values(7, 'ddd', 'd@gmail.com', '10JUL00', 2);
+insert into participant values(8, 'jjj', 'j@gmail.com', '07FEB99', 1);
+insert into participant values(9, 'ppp', 'p@gmail.com', '04MAR99', 5);
+insert into participant values(10, 'fff', 'f@gmail.com', '04JUN99', 3);
+
+insert into conference_venue values(1, 'fun');
+insert into conference_venue values(2, 'dun');
+insert into conference_venue values(3, 'kun');
+insert into conference_venue values(4, 'nun');
+insert into conference_venue values(5, 'hun');
+
+insert into room values(45, 0, 23, 2, 1);
+insert into room values(46, 1, 31, 3, 2);
+insert into room values(47, 2, 56, 5, 3);
+insert into room values(48, 3, 89, 2, 4);
+insert into room values(49, 4, 90, 1, 5);
+
+
+select name, wid from workshop;
+
+update workshop set name = 'none' where wid = 1;
+
+delete from room where room = 1;
+
+alter table workshop
+add monthly_income number;
+
+alter table workshop
+drop column start_date;
+
+alter table workshop
+rename column monthly_income to yearly_income;
+
+truncate table room;
+
+update room set capacity = capacity + capacity * 0.95;

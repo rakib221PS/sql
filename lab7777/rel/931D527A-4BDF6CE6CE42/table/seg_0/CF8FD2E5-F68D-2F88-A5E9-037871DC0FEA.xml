@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CF8FD2E5-F68D-2F88-A5E9-037871DC0FEA" name="venue">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>A6EDD5EB-B546-113E-2AAF-27E36DC4A1FF</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F24175C5-7CA3-2D90-40A8-87C24529DC9C">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>C23E4884-4054-AA59-C5BF-D578F3AB01B6</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="conference_venue_ID" id="A5884D64-142C-D446-F926-9DC1F038F044">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="57252A93-69A4-032C-E339-B92DBCADCD5C" name="conference_venue_PK">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="A5884D64-142C-D446-F926-9DC1F038F044"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

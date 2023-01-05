@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="47FD326A-9CAB-1278-2638-47AFAF4AEDA6" name="workshop">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>CF705980-234E-9AB8-6BD2-2F5827932F5D</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="wid" id="936B3A2A-F6A3-2B0B-DA40-87C7E5375997">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>BA5349F5-71BE-9798-EBC1-A5D2AB530BD9</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="FAFCB3C8-0ABF-9061-4CE1-0FC4244E869B">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>0970FFCE-4343-DE76-B50B-990A5E132A9A</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="start_date" id="668CC4CB-2450-DF29-1105-EB2B8F94AAAD">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>39C3AD75-C973-754A-D9F9-EC46F4294962</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="end_date" id="7071B041-3ED1-404C-67B5-35C96CE65E6C">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>59D3AE8B-05DB-C812-5094-211EDEDE5A19</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6C81C097-7D91-41A6-63C6-A6658705327D" name="workshop_PK">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>0C447F79-1DE2-CD50-5C31-7119D4999D4F</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="936B3A2A-F6A3-2B0B-DA40-87C7E5375997"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

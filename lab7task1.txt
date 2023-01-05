@@ -1,0 +1,57 @@
+CREATE TABLE product (
+    pid       NUMBER NOT NULL,
+    name      VARCHAR2(32) NOT NULL,
+    price     NUMBER NOT NULL,
+    available NUMBER NOT NULL,
+    seller_id NUMBER NOT NULL
+);
+
+ALTER TABLE product ADD CONSTRAINT product_pk PRIMARY KEY ( pid );
+
+CREATE TABLE seller (
+    id            NUMBER NOT NULL,
+    name          VARCHAR2(32) NOT NULL,
+    email         VARCHAR2(32) NOT NULL,
+    postaladdress NUMBER NOT NULL
+);
+
+ALTER TABLE seller ADD CONSTRAINT seller_pk PRIMARY KEY ( id );
+
+ALTER TABLE product
+    ADD CONSTRAINT product_seller_fk FOREIGN KEY ( seller_id )
+        REFERENCES seller ( id );
+
+insert into seller values(6, 'kkk', 'k@gmail.com', 90231);
+insert into seller values(7, 'ddd', 'd@gmail.com', 44444);
+insert into seller values(8, 'jjj', 'j@gmail.com', 23123);
+insert into seller values(9, 'ppp', 'p@gmail.com', 90866);
+insert into seller values(10, 'fff', 'f@gmail.com', 30006);
+
+insert into product values(1, 'fun', 12, 23, 6);
+insert into product values(2, 'dun', 12, 45, 7);
+insert into product values(3, 'kun', 15, 223, 8);
+insert into product values(4, 'nun', 125, 923, 9);
+insert into product values(5, 'hun', 212, 13, 10);
+
+select name, pid from product;
+
+update seller set name = 'none' where id = 6;
+
+-- delete which refrence foriegn key. another easy to delete using ON DELETE CASCADE
+delete from product where seller_id in (select id from seller where name = 'none');
+delete from seller where name='none';
+
+alter table seller
+add monthly_income number;
+
+insert into seller values(11, 'xxx', 'x@gmail.com', 89654, 56789);
+
+alter table seller
+drop column postaladdress;
+
+alter table seller
+rename column monthly_income to yearly_income;
+
+alter table product drop constraint product_seller_fk;
+truncate table seller;
+alter table product add constraint product_seller_fk foriegn key (seller_id) REFERENCES seller (id);

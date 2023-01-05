@@ -1,0 +1,99 @@
+create table staff(
+    id number not null,
+    name varchar2(32) not null,
+    job_title varchar2(32) not null,
+    salary number not null
+);
+
+create table department(
+    did number not null,
+    name varchar2(32) not null,
+    address varchar2(32) not null
+);
+
+create table headOfDepartment(
+    staff_id number not null,
+    department_did number not null
+);
+
+create unique index headOfDepartment_idx on
+    headOfDepartment(
+        staff_id
+    asc);
+
+
+create unique index headOfDepartment_idxv1 on
+    headOfDepartment(
+        department_did
+    asc);
+
+create table staffDepartment(
+    staff_id number not null,
+    department_id number not null
+);
+
+alter table staff add constraint staff_pk primary key (id);
+alter table department add constraint department_pk primary key (did);
+alter table staffDepartment add constraint staffDepartment_pk primary key (staff_id, department_id);
+alter table headOfDepartment add constraint headOfDepartment_pk primary key (staff_id, department_did);
+
+alter table headOfDepartment
+        add constraint headOfDepartment_staff_fk foreign key (staff_id)
+            references staff (id);
+
+alter table headOfDepartment
+        add constraint headOfDepartment_department_fk foreign key (department_did)
+            references department (did);
+
+alter table staffDepartment
+        add constraint staffDepartment_staff_fk foreign key (staff_id)
+            references staff (id);
+
+alter table staffDepartment
+        add constraint staffDepartment_department_fk foreign key (department_id)
+            references department (did);
+
+
+insert into staff values(1, 'kkk', 'job', 3213);
+insert into staff values(2, 'kk', 'job1', 20000);
+insert into staff values(3, 'kjj', 'job2', 10000);
+insert into staff values(4, 'ppp', 'job3', 90875);
+insert into staff values(5, 'yyy', 'jo3b', 45896);
+
+insert into department values(6, 'fun', 'none');
+insert into department values(7, 'jun', 'not exists');
+insert into department values(8, 'kun', 'out of galaxy');
+insert into department values(9, 'jun', 'i do not know');
+insert into department values(10, 'kun', 'hidden');
+
+insert into staffDepartment values(1, 6);
+insert into staffDepartment values(2, 7);
+insert into staffDepartment values(3, 8);
+insert into staffDepartment values(4, 9);
+insert into staffDepartment values(5, 10);
+
+insert into headOfDepartment values(1, 6);
+insert into headOfDepartment values(2, 7);
+insert into headOfDepartment values(3, 8);
+insert into headOfDepartment values(4, 9);
+insert into headOfDepartment values(5, 10);
+
+
+select name, id from staff;
+
+update staff set name = 'none' where id = 1;
+
+delete from headOfDepartment where staff_id = 1;
+
+alter table staff
+add monthly_income number;
+
+alter table staff
+drop column name;
+
+alter table staff
+rename column monthly_income to yearly_income;
+
+truncate table headOfDepartment;
+
+update staff set salary = (select sum(salary) from staff) / id;

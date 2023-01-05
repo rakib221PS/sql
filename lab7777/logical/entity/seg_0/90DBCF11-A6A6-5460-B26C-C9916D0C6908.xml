@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="90DBCF11-A6A6-5460-B26C-C9916D0C6908" name="room">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 11:53:02 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<engineerTo>
+<item key="931D527A-D911-4A5A-3E58-4BDF6CE6CE42" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="room_id" id="8B251506-9E8C-7376-4E38-962547BFAB44">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 11:53:21 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<engineerTo>
+<item key="931D527A-D911-4A5A-3E58-4BDF6CE6CE42" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="wid" id="AC89F4EC-7A3B-89C4-92AC-38B9C6EC930C">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:07 UTC</createdTime>
+<generatorID>F0F67DC1-7275-0D12-49EE-6949E02D9CB3</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<engineerTo>
+<item key="931D527A-D911-4A5A-3E58-4BDF6CE6CE42" value="true"/>
+</engineerTo>
+<referedAttribute>BA5349F5-71BE-9798-EBC1-A5D2AB530BD9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7D3D256A-BBB3-225A-D445-00E3B01046AB" name="room PK">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 11:53:40 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="931D527A-D911-4A5A-3E58-4BDF6CE6CE42" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8B251506-9E8C-7376-4E38-962547BFAB44</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A6EDD5EB-B546-113E-2AAF-27E36DC4A1FF" name="venue">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 11:52:26 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<engineerTo>
+<item key="931D527A-D911-4A5A-3E58-4BDF6CE6CE42" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="C23E4884-4054-AA59-C5BF-D578F3AB01B6">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 11:52:35 UTC</createdTime>
+<ownerDesignName>lab7777</ownerDesignName>
+<engineerTo>
+<item key="931D527A-D911-4A5A-3E58-4BDF6CE6CE42" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,16 @@
+create table operation(
+    id number not null,
+    name varchar2(32) not null,
+    salary number not null
+);
+
+insert into operation values(1, 'ra', 3456);
+insert into operation values(1, 'ra', 3456);
+insert into operation values(1, 'ra', 3456);
+insert into operation values(2, 'ka', 578);
+insert into operation values(3, 'ba', 1267);
+insert into operation values(2, 'ka', 578);
+insert into operation values(4, 'pa', 123);
+insert into operation values(5, 'na', 890765);
+
+select * from operation order by salary desc;

@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AA166148-CB7F-216C-220D-DE55D863EB4C" name="participant">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>293A8F60-DB59-1532-68EB-7C730EDE1BC8</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pid" id="5DDA2859-1379-F735-67D3-23E38D23E07C">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>769CB656-0BD9-145C-4A0B-2DF6B32A393D</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="19F4668C-B597-30D9-F9D6-BF705353E511">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>BBB3BC6C-5E76-0599-7F5C-60E966C9E4BD</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="2B0A011D-187E-9CB1-19E0-7D261CA6C9FC">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>F0A8F399-33FF-150E-6B8D-EA363E3AC465</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="day" id="956FF29F-0421-A183-A718-5584EADB8328">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>030C3BC2-C26D-D80D-11DC-33EBBC05F083</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="workshop_wid" id="80C9D151-180F-5AE8-C585-00D493DC6B9E">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>514328DC-39A4-2A68-D6A6-3C6B66033948</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3E6D9A4-D2B0-A952-BCEE-CCF4D1FFA902" referredColumn="936B3A2A-F6A3-2B0B-DA40-87C7E5375997"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6C3DAAE8-BFAB-E420-1A57-FA9E9A5DAA10" name="participant_PK">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>71184738-F098-409C-0AFB-B92993C67EF3</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DDA2859-1379-F735-67D3-23E38D23E07C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CC751780-5C1C-FEEF-DA8C-7D8B8EC5B143" name="participant_workshop_FK">
+<createdBy>redcoder04</createdBy>
+<createdTime>2023-01-05 12:02:17 UTC</createdTime>
+<generatorID>4FC2ECF3-E2BE-1868-A1E9-50CCEDF682C2</generatorID>
+<ownerDesignName>lab7777</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="80C9D151-180F-5AE8-C585-00D493DC6B9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
