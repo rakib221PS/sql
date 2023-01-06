@@ -1,16 +1,122 @@
-create table operation(
-    id number not null,
-    name varchar2(32) not null,
-    salary number not null
+create table countries(
+    country_id number not null,
+    country_name varchar2(32) not null,
+    region_id number not null
 );
 
-insert into operation values(1, 'ra', 3456);
-insert into operation values(1, 'ra', 3456);
-insert into operation values(1, 'ra', 3456);
-insert into operation values(2, 'ka', 578);
-insert into operation values(3, 'ba', 1267);
-insert into operation values(2, 'ka', 578);
-insert into operation values(4, 'pa', 123);
-insert into operation values(5, 'na', 890765);
+create table department(
+    department_id number not null,
+    department_name varchar2(32) not null,
+    manager_id number,
+    location_id number
+);
 
-select * from operation order by salary desc;
+create table employees(
+    employe_id number not null,
+    first_name varchar2(32) not null,
+    last_name varchar2(32),
+    email varchar2(32) not null,
+    phone_number number not null,
+    hire_date date not null,
+    job_id number not null,
+    salary number not null,
+    comminsion_pct number not null,
+    manager_id number not null,
+    department_id number not null
+);
+
+create table job(
+    job_id number(10) not null,
+    job_title varchar2(32) not null,
+    min_salary number not null,
+    max_salary number not  null
+);
+
+create table job_history(
+    employe_id number not null,
+    start_date date not null,
+    end_date date not null,
+    job_id number not null,
+    department_id number not null
+);
+
+create table locations(
+    location_id number not null,
+    street_address varchar2(40) not null,
+    postal_code number not null,
+    city varchar2(32) not null,
+    state_province varchar2(32) not null,
+    country_id number not null
+);
+
+create table regions(
+    region_id number not null,
+    region_name varchar2(32) not null
+);
+
+insert into countries values(1, 'Bangladesh', 12);
+insert into countries values(2, 'Japan', 2);
+insert into countries values(3, 'Gerogia', 123);
+insert into countries values(1, 'Bangladesh', 12);
+insert into countries values(2, 'Japan', 2);
+insert into countries values(1, 'Bangladesh', 12);
+insert into countries values(2, 'Argentina', 2);
+insert into countries values(1, 'Zimbabwe', 12);
+insert into countries values(2, 'Zambia', 2);
+
+insert into department values(1, 'computer science', 1, 1);
+insert into department values(2, 'health science', 2, 2);
+insert into department values(3, 'physics', 3, 3);
+
+insert into employees values(1, 'john', 'paul', 'p@gmail.com', 456777, '04JUN21', 1, 34578, 12, 1, 1);
+insert into employees values(2, 'none', 'paul', 'n@gmail.com', 6777, '04JAN23', 2, 3578, 2, 1, 1);
+insert into employees values(1, 'kun', 'non', 'k@gmail.com', 456, '21MAR21', 23, 7578, 12, 3, 3);
+insert into employees values(1, 'john', 'paul', 'p@gmail.com', 456777, '04JUN21', 1, 4500, 12, 1, 1);
+insert into employees values(2, 'none', 'paul', 'n@gmail.com', 6777, '04JAN23', 2, 5600, 2, 1, 1);
+insert into employees values(1, 'kun', 'non', 'k@gmail.com', 456, '21MAR21', 23, 4134, 12, 3, 3);
+
+insert into job values(1, 'developer', 3456, 12323);
+insert into job values(23, 'destroyer', 34156, 1232233);
+insert into job values(2, 'creator', 356, 2323);
+
+insert into job_history values(1, '1JUN22', '2JAN23', 23, 2);
+insert into job_history values(2, '10FEB21', '2JAN23', 2, 2);
+insert into job_history values(3, '1JUN22', '2JAN23', 1, 3);
+
+insert into locations values(1, 'none', 456, 'no', 'not', 2);
+insert into locations values(2, 'not, available', 556, 'nno', 'not exists', 1);
+insert into locations values(3, 'sun', 48886, 'mars', 'saturn', 2);
+
+insert into regions values(2, 'asia');
+insert into regions values(23, 'africa');
+insert into regions values(123, 'latin america');
+
+1. select * from countries;
+   select * from department;
+   select * from employees;
+   select * from job;
+   select * from job_history;
+   select * from locations;
+   select * from regions;
+
+2. select first_name, last_name from employees;
+
+3. select country_name from countries;
+
+4. select * from department where department_id = 1;
+
+5. select * from employees order by salary asc;
+
+6. select * from employees where salary < 10000;
+
+7. select distinct country_id, country_name from countries;
+
+8.
+
+9. select avg(salary) as allAverage from employees;
+
+10. select * from employees where salary between 4000 and 6000;
+
+11. select * from countries where country_name like 'z%';
+
+12. select * from employees where first_name like 'k%' or last_name like 'k%';
