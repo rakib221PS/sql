@@ -91,7 +91,7 @@ insert into regions values(2, 'asia');
 insert into regions values(23, 'africa');
 insert into regions values(123, 'latin america');
 
-1. select * from countries;
+select * from countries;
    select * from department;
    select * from employees;
    select * from job;
@@ -99,24 +99,32 @@ insert into regions values(123, 'latin america');
    select * from locations;
    select * from regions;
 
-2. select first_name, last_name from employees;
+select first_name, last_name from employees;
 
-3. select country_name from countries;
+select country_name from countries;
 
-4. select * from department where department_id = 1;
+select * from department where department_id = 1;
 
-5. select * from employees order by salary asc;
+select * from employees order by salary asc;
 
-6. select * from employees where salary < 10000;
+select * from employees where salary < 10000;
 
-7. select distinct country_id, country_name from countries;
+select distinct country_id, country_name from countries;
 
-8.
 
-9. select avg(salary) as allAverage from employees;
 
-10. select * from employees where salary between 4000 and 6000;
+select avg(salary) as allAverage from employees;
 
-11. select * from countries where country_name like 'z%';
+select * from employees where salary between 4000 and 6000;
 
-12. select * from employees where first_name like 'k%' or last_name like 'k%';
+select * from countries where country_name like 'z%';
+
+select * from employees where first_name like 'k%' or last_name like 'k%';
+
+
+
+select round(salary + 0.2222222222222, 2) as roundedsalary from employees;
+
+select first_name from employees order by length(first_name) desc;
+
+select first_name, last_name from employees where mod(employe_id, 2) <> 0; 
