@@ -19,8 +19,8 @@ create table employees(
     phone_number number not null,
     hire_date date not null,
     job_id number not null,
-    salary number not null,
-    comminsion_pct number not null,
+    salary number(8, 2) not null,
+    comminsion_pct number(2, 2) not null,
     manager_id number not null,
     department_id number not null
 );
@@ -68,12 +68,12 @@ insert into department values(1, 'computer science', 1, 1);
 insert into department values(2, 'health science', 2, 2);
 insert into department values(3, 'physics', 3, 3);
 
-insert into employees values(1, 'john', 'paul', 'p@gmail.com', 456777, '04JUN21', 1, 34578, 12, 1, 1);
-insert into employees values(2, 'none', 'paul', 'n@gmail.com', 6777, '04JAN23', 2, 3578, 2, 1, 1);
-insert into employees values(1, 'kun', 'non', 'k@gmail.com', 456, '21MAR21', 23, 7578, 12, 3, 3);
-insert into employees values(1, 'john', 'paul', 'p@gmail.com', 456777, '04JUN21', 1, 4500, 12, 1, 1);
-insert into employees values(2, 'none', 'paul', 'n@gmail.com', 6777, '04JAN23', 2, 5600, 2, 1, 1);
-insert into employees values(1, 'kun', 'non', 'k@gmail.com', 456, '21MAR21', 23, 4134, 12, 3, 3);
+insert into employees values(1, 'john', 'paul', 'p@gmail.com', 456777, '04JUN21', 1, 34578, 0.2, 1, 1);
+insert into employees values(2, 'none', 'paul', 'n@gmail.com', 6777, '04JAN23', 2, 3578.34, 0.12, 1, 1);
+insert into employees values(1, 'kun', 'non', 'k@gmail.com', 456, '21MAR21', 23, 7578, 0.12, 2, 3);
+insert into employees values(1, 'john', 'paul', 'p@gmail.com', 456777, '04JUN21', 1, 4500, 0.12, 1, 1);
+insert into employees values(2, 'none', 'paul', 'n@gmail.com', 6777, '04JAN23', 2, 5600.1, 0.62, 5, 1);
+insert into employees values(1, 'kun', 'non', 'k@gmail.com', 456, '21MAR21', 23, 4134, 0.82, 3, 3);
 
 insert into job values(1, 'developer', 3456, 12323);
 insert into job values(23, 'destroyer', 34156, 1232233);
@@ -111,7 +111,7 @@ select * from employees where salary < 10000;
 
 select distinct country_id, country_name from countries;
 
-
+update employees set salary = salary + 100 * comminsion_pct where comminsion_pct = 0.12;
 
 select avg(salary) as allAverage from employees;
 
@@ -121,10 +121,14 @@ select * from countries where country_name like 'z%';
 
 select * from employees where first_name like 'k%' or last_name like 'k%';
 
-
+select trunc(current_date) as current_date from dual;
+update employees set hire_date = current_date;
 
 select round(salary + 0.2222222222222, 2) as roundedsalary from employees;
 
 select first_name from employees order by length(first_name) desc;
 
 select first_name, last_name from employees where mod(employe_id, 2) <> 0; 
+
+alter table countries
+rename column country_name to "country name";
